@@ -9,7 +9,7 @@ _OPT 2026 Summer Season — Dev Track Onboarding Repo_
 
 이 레포는 OPT 개발 트랙 학회원들이 **GitHub 협업 기본 사이클**(clone → branch → commit → push → PR → review → merge)을 실제로 몸에 익히기 위한 **연습장(sandbox)** 입니다.
 
-여기서는 부담 없이 실수해도 됩니다. 실제 산출물은 `SS-harness-lab`, 최종 공동 하네스는 `SS-harness` 레포에서 다룹니다.
+여기서는 부담 없이 실수해도 됩니다. 실제 산출물은 `SS-Harness-private`, 최종 공동 하네스는 `SS-Harness-communal` 레포에서 다룹니다.
 
 ### 트랙 구성원
 
@@ -20,7 +20,7 @@ _OPT 2026 Summer Season — Dev Track Onboarding Repo_
 | 멤버 | 박세인 |
 | 멤버 | 박인찬 |
 
-### 첫 미션 (토요일 왕십리 모임)
+### 첫 미션 (260710 토요일 13시 왕십리)
 
 1. 이 레포를 로컬에 clone
 2. 본인 이름으로 브랜치 생성 (`intro/이름`)
@@ -49,8 +49,8 @@ SS-onboarding/
 ### 관련 레포
 
 - `SS-onboarding` (이 레포) — 온보딩 & 실습 샌드박스
-- `SS-harness-lab` — 개인 하네스 산출물 (4~5주차)
-- `SS-harness` — 학회 공동 하네스 최종 산출물 (8월~)
+- `SS-Harness-private` — 개인 하네스 산출물 (4~5주차)
+- `SS-Harness-communal` — 학회 공동 하네스 최종 산출물 (8월~)
 
 ---
 
