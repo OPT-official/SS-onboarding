@@ -1,127 +1,75 @@
-# 🌿 Git 워크플로우 / Git Workflow
+# 🌿 Git 워크플로우 치트시트
 
-이 프로젝트에서 사용하는 브랜치/커밋/PR 규칙입니다.
-Branch, commit, and PR conventions used in this project.
-
----
-
-## 🇰🇷 한국어
-
-### 브랜치 네이밍
-
-| 접두사 | 용도 | 예시 |
-|--------|------|------|
-| `intro/` | 자기소개 (온보딩용) | `intro/byeol` |
-| `feat/` | 새 기능/컨텐츠 추가 | `feat/hook-example` |
-| `fix/` | 버그 수정 | `fix/broken-link` |
-| `docs/` | 문서만 수정 | `docs/update-readme` |
-| `chore/` | 설정/자잘한 변경 | `chore/update-gitignore` |
-| `experiment/` | 실험용 | `experiment/mcp-test` |
-
-### 커밋 메시지
-
-간단하게 씁니다. 형식은 자유롭지만 다음이 좋은 예시:
-
-```
-자기소개: 정별
-feat: settings.json 예시 추가
-fix: README 링크 오타
-docs: 토요일 미션 절차 보완
-```
-
-한 커밋에 여러 개 섞지 말고, 논리 단위로 나누는 걸 지향합니다.
-
-### PR 규칙
-
-- **main 브랜치는 보호되어 있음** — PR 없이 직접 push 불가
-- 최소 1명 리뷰 필요 (트랙리드)
-- PR 제목은 커밋 메시지 스타일과 동일하게
-- PR 본문에 관련 이슈 링크 (`closes #12`)
-- Merge 방식: **Squash and merge** (히스토리 깔끔)
-
-### 자주 쓰는 명령어
-
-```bash
-# 최신 main 받아오기
-git checkout main && git pull
-
-# 브랜치 생성 + 이동
-git checkout -b feat/my-feature
-
-# 변경사항 스테이징 + 커밋
-git add .
-git commit -m "feat: 뭐뭐 추가"
-
-# 원격에 push (첫 push는 -u)
-git push -u origin feat/my-feature
-
-# 원격에서 로컬로 브랜치 정리
-git fetch --prune
-git branch -d feat/merged-feature
-```
-
-### 충돌(conflict) 났을 때
-
-```bash
-git checkout main
-git pull
-git checkout feat/my-feature
-git rebase main
-# 충돌 파일 열어서 해결 후
-git add .
-git rebase --continue
-git push --force-with-lease
-```
-
-`--force-with-lease` 는 안전한 force push. 그냥 `--force` 는 피할 것.
+이 프로젝트(그리고 SS-Harness 레포들)에서 쓰는 규칙. **이 한 장만 기억하면 됩니다.**
 
 ---
 
-## 🇬🇧 English
-
-### Branch Naming
-
-| Prefix | Use | Example |
-|--------|-----|---------|
-| `intro/` | Self-introduction (onboarding) | `intro/byeol` |
-| `feat/` | New feature/content | `feat/hook-example` |
-| `fix/` | Bug fix | `fix/broken-link` |
-| `docs/` | Docs only | `docs/update-readme` |
-| `chore/` | Config/misc | `chore/update-gitignore` |
-| `experiment/` | Experimental | `experiment/mcp-test` |
-
-### Commit Messages
-
-Keep them simple. Format is flexible; good examples:
+## 브랜치 이름
 
 ```
-intro: byeol
-feat: add settings.json example
-fix: broken link in README
-docs: expand Saturday mission steps
+intro/이름        자기소개 (온보딩)
+feat/뭐뭐         새 기능·컨텐츠
+fix/뭐뭐          수정
+docs/뭐뭐         문서만
+experiment/뭐뭐   실험
 ```
 
-Split by logical unit — don't cram unrelated changes into one commit.
+## 커밋 메시지
 
-### PR Rules
+한 줄로, 뭘 했는지 보이게. 형식보다 **명확함**이 우선.
 
-- **`main` is protected** — no direct pushes
-- At least 1 review required (track lead)
-- PR title follows commit message style
-- Link related issue in the PR body (`closes #12`)
-- Merge strategy: **Squash and merge**
+```
+자기소개: 정지나
+feat: pre-commit hook 예시 추가
+fix: README 깨진 링크
+```
 
-### Handling Conflicts
+❌ `수정`, `업데이트`, `asdf` — 나중에 아무도 못 알아봄
+
+## PR 규칙 (전 레포 공통)
+
+- `main` 직접 push 금지 (protected) → 무조건 PR
+- 리뷰 1명 승인 필요
+- 이슈 연결: PR 본문에 `closes #12`
+- merge 방식: **Squash and merge**
+
+## 매일 쓰는 명령어 6개
 
 ```bash
-git checkout main
-git pull
-git checkout feat/my-feature
-git rebase main
-# resolve conflicts, then
-git add .
-git rebase --continue
-git push --force-with-lease
+git checkout main && git pull        # 시작 전: 최신화
+git checkout -b feat/my-work         # 브랜치 생성+이동
+git add .                            # 변경사항 담기
+git commit -m "feat: 뭐뭐"           # 저장
+git push -u origin feat/my-work      # 올리기 (첫 push만 -u)
+git branch -d feat/my-work           # merge 후 정리
 ```
 
-Prefer `--force-with-lease` over `--force`.
+## 충돌(conflict) 났을 때
+
+```bash
+git checkout main && git pull        # main 최신화
+git checkout feat/my-work
+git rebase main                      # 내 브랜치에 main 반영
+# → 충돌 파일 열어서 <<<< ==== >>>> 부분 정리 후:
+git add . && git rebase --continue
+git push --force-with-lease          # --force 말고 이걸로
+```
+
+## 급할 때 이것만
+
+| 하고 싶은 것 | 명령어 |
+|---|---|
+| 지금 무슨 상태지? | `git status` |
+| 뭘 바꿨더라? | `git diff` |
+| 방금 커밋 취소 (변경은 유지) | `git reset --soft HEAD~1` |
+| 이 파일만 원래대로 | `git checkout -- 파일명` |
+| 히스토리 보기 | `git log --oneline -10` |
+
+---
+
+## 🇬🇧 English (TL;DR)
+
+Branches: `intro/`, `feat/`, `fix/`, `docs/`, `experiment/`. One-line clear
+commit messages. `main` is protected — PR only, 1 approval, squash-merge,
+link issues with `closes #N`. On conflicts: rebase onto main, resolve,
+`--force-with-lease`.

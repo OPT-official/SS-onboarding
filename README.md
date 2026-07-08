@@ -1,102 +1,70 @@
 # SS-onboarding
 
-**OPT 2026 Summer Season — 개발 트랙 온보딩 레포**
-_OPT 2026 Summer Season — Dev Track Onboarding Repo_
+> **OPT 2026 Summer Season · 개발 트랙 온보딩 레포**
+> GitHub 협업을 처음 해봐도, 이 레포에서 한 사이클 돌리면 감이 잡힙니다.
 
 ---
 
-## 🇰🇷 한국어
+## 🚀 처음 왔다면 (3분 요약)
 
-이 레포는 OPT 개발 트랙 학회원들이 **GitHub 협업 기본 사이클**(clone → branch → commit → push → PR → review → merge)을 실제로 몸에 익히기 위한 **연습장(sandbox)** 입니다.
+1. **이 레포는 연습장입니다.** 망가뜨려도 됩니다. 실수 환영.
+2. **첫 미션:** 자기소개 파일을 PR로 올리기 → [`docs/saturday-mission.md`](docs/saturday-mission.md)
+3. **모르면:** Discord에 묻기, 또는 Issue 발행 (템플릿 있음)
 
-여기서는 부담 없이 실수해도 됩니다. 실제 산출물은 `SS-Harness-private`, 최종 공동 하네스는 `SS-Harness-communal` 레포에서 다룹니다.
+```
+배우는 것: clone → branch → commit → push → PR → review → merge
+```
 
-### 트랙 구성원
+## 📂 뭐가 어디 있나
+
+| 위치 | 내용 |
+|------|------|
+| `docs/saturday-mission.md` | 토요일 실습 절차 (따라하기만 하면 됨) |
+| `docs/git-workflow.md` | 브랜치/커밋/PR 규칙 치트시트 |
+| `docs/ops-playbook.md` | 🔑 트랙리드용 운영 플레이북 |
+| `members_intro/` | 자기소개 파일 올리는 곳 (첫 실습) |
+| `.github/` | 이슈/PR 템플릿 — 자동으로 적용됨 |
+
+## 👥 트랙 구성원
 
 | 역할 | 이름 |
 |------|------|
 | 트랙 리드 (학회장) | 정별 |
-| 멤버 | 정지나 |
-| 멤버 | 박세인 |
-| 멤버 | 박인찬 |
+| 멤버 | 정지나 · 박세인 · 박인찬 |
 
-### 첫 미션 (260710 토요일 13시 왕십리)
-
-1. 이 레포를 로컬에 clone
-2. 본인 이름으로 브랜치 생성 (`intro/이름`)
-3. `members_intro/이름.md` 파일 작성 (템플릿은 `members_intro/TEMPLATE.md`)
-4. commit → push → Pull Request 열기
-5. 트랙리드 리뷰 후 merge
-
-자세한 절차는 [`docs/saturday-mission.md`](docs/saturday-mission.md) 참고.
-
-### 폴더 구조
+## 🔁 주간 운영 방식
 
 ```
-SS-onboarding/
-├── .github/              # 이슈/PR 템플릿, 라벨 정의
-├── docs/                 # 워크플로우 가이드, 미션 문서
-└── members_intro/        # 각자 자기소개 (토요일 실습)
+매주 토 11시 왕십리 모임
+      │
+      ▼
+[Issue] 주간 과제 발행 (weekly-task 라벨)
+      │
+      ▼
+각자 작업 → commit → push → [PR] 산출물 제출 (closes #이슈번호)
+      │
+      ▼
+[Review] 피드백 주고받기 → merge → 다음 주
 ```
 
-### 주간 운영 원칙
+- `main`은 protected — **PR 없이는 merge 불가**
+- 피드백은 PR 리뷰 코멘트로
 
-- 매주 과제는 **Issue**로 발행됩니다 (`weekly-task` 라벨 + milestone)
-- 산출물은 **Pull Request**로 제출하고, 이슈 번호를 연결하세요 (`closes #12`)
-- 피드백은 **PR 리뷰 코멘트**로 주고받습니다
-- main 브랜치는 protected — 반드시 PR을 통해서만 merge 가능
+## 🗺️ 레포 지도 (Summer Season 전체)
 
-### 관련 레포
-
-- `SS-onboarding` (이 레포) — 온보딩 & 실습 샌드박스
-- `SS-Harness-private` — 개인 하네스 산출물 (4~5주차)
-- `SS-Harness-communal` — 학회 공동 하네스 최종 산출물 (8월~)
+| 레포 | 용도 | 시기 |
+|------|------|------|
+| **SS-onboarding** (여기) | GitHub 연습장 | Week 0~1 |
+| [SS-Harness-private](https://github.com/OPT-official/SS-Harness-private) | 개인 하네스 산출물 | 7월 |
+| [SS-Harness-communal](https://github.com/OPT-official/SS-Harness-communal) | 학회 공동 하네스 | 8월 |
 
 ---
 
-## 🇬🇧 English
+## 🇬🇧 English (TL;DR)
 
-This repository is a **sandbox** for OPT Dev Track members to practice the **core GitHub collaboration cycle** (clone → branch → commit → push → PR → review → merge) hands-on.
-
-Feel free to make mistakes here. Real deliverables live in `SS-harness-lab`, and the final shared harness in `SS-harness`.
-
-### Track Members
-
-| Role | Name |
-|------|------|
-| Track Lead (President) | Byeol Jung |
-| Member | Jina Jung |
-| Member | Sein Park |
-| Member | Inchan Park |
-
-### First Mission (Saturday meetup — Wangsimni)
-
-1. Clone this repo locally
-2. Create a branch under your name (`intro/yourname`)
-3. Write `members_intro/yourname.md` (see `members_intro/TEMPLATE.md`)
-4. Commit → push → open a Pull Request
-5. Track lead reviews, then merges
-
-See [`docs/saturday-mission.md`](docs/saturday-mission.md) for the full walkthrough.
-
-### Folder Structure
-
-```
-SS-onboarding/
-├── .github/              # Issue/PR templates, label definitions
-├── docs/                 # Workflow guides, mission docs
-└── members_intro/        # Self-introductions (Saturday practice)
-```
-
-### Weekly Operations
-
-- Weekly tasks are issued as **Issues** (`weekly-task` label + milestone)
-- Submit deliverables via **Pull Request**, linking the issue (`closes #12`)
-- Feedback happens through **PR review comments**
-- `main` is protected — merges only via PR
-
-### Related Repositories
-
-- `SS-onboarding` (this repo) — Onboarding & practice sandbox
-- `SS-harness-lab` — Individual harness deliverables (weeks 4–5)
-- `SS-harness` — Final shared harness (August onward)
+Practice sandbox for the OPT dev track. Learn the full GitHub cycle
+(clone → branch → commit → push → PR → review → merge) by submitting
+your intro file via PR. See [`docs/saturday-mission.md`](docs/saturday-mission.md).
+Breaking things here is fine — that's what this repo is for.
+Weekly cycle: task issued as Issue → work → PR → review → merge.
+`main` is protected; merges happen only via PR.

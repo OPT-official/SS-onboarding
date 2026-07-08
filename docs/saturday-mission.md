@@ -1,46 +1,57 @@
-# 🎯 토요일 첫 미션 / Saturday First Mission
+# 🎯 토요일 첫 미션 — 자기소개 PR 올리기
 
-**목표 / Goal:** GitHub 협업 한 사이클을 직접 굴려보기
-**Goal:** Run through one full GitHub collaboration cycle hands-on
-
-`clone` → `branch` → `commit` → `push` → `Pull Request` → `review` → `merge`
+**목표:** GitHub 협업 한 사이클을 직접 돌려본다.
+`clone → branch → commit → push → PR → review → merge`
 
 ---
 
-## 🇰🇷 한국어 절차
+## ⏱️ 당일 아젠다 (트랙리드 진행 기준, 약 90분)
 
-### 0. 사전 준비
+| 시간 | 내용 |
+|------|------|
+| 00:00–00:10 | 레포 구조 소개, 오늘 목표 공유 (트랙리드) |
+| 00:10–00:20 | 사전 준비 체크 (git 설치, org 초대 수락 확인) |
+| 00:20–01:00 | **실습:** 아래 절차 각자 진행 (트랙리드는 돌아다니며 도움) |
+| 01:00–01:20 | PR 리뷰 라이브 시연 → 전원 merge |
+| 01:20–01:30 | 다음 주 과제 안내 (Issue 같이 보기), Q&A |
 
-- [ ] GitHub 계정 있음
-- [ ] `OPT-official` org 초대 수락함
-- [ ] 로컬에 git 설치됨 (`git --version` 확인)
-- [ ] VS Code(또는 원하는 에디터) 준비
-- [ ] (선택) `gh` CLI 설치 — 있으면 편함
+---
 
-### 1. 이 레포 clone
+## ✅ 사전 준비 (모임 전에 각자)
+
+- [ ] GitHub 계정 + `OPT-official` org 초대 수락
+- [ ] git 설치 확인: 터미널에 `git --version`
+- [ ] VS Code(또는 선호 에디터) 설치
+
+---
+
+## 📝 실습 절차
+
+### 1. clone — 레포 내려받기
 
 ```bash
 git clone https://github.com/OPT-official/SS-onboarding.git
 cd SS-onboarding
 ```
 
-### 2. 본인 브랜치 만들기
+### 2. branch — 내 작업 공간 만들기
 
 ```bash
-git checkout -b intro/본인이름
-# 예: git checkout -b intro/byeol
+git checkout -b intro/본인이름   # 예: intro/jina
 ```
 
-### 3. 자기소개 파일 만들기
+> 💡 **왜 브랜치?** main을 직접 건드리지 않고 안전하게 작업하기 위해서.
+> 이 레포의 main은 protected라 애초에 직접 push가 막혀 있음.
 
-`members_intro/TEMPLATE.md` 를 복사해서 `members_intro/본인이름.md` 로 저장하고 내용 채우기.
+### 3. 자기소개 파일 작성
 
 ```bash
-cp members_intro/TEMPLATE.md members_intro/byeol.md
-# 그리고 에디터로 열어서 편집
+cp members_intro/TEMPLATE.md members_intro/본인이름.md
 ```
 
-### 4. commit & push
+에디터로 열어서 내용 채우기. (파일명은 영문 소문자: `jina.md`)
+
+### 4. commit & push — 저장하고 올리기
 
 ```bash
 git add members_intro/본인이름.md
@@ -48,17 +59,15 @@ git commit -m "자기소개: 본인이름"
 git push -u origin intro/본인이름
 ```
 
-### 5. Pull Request 열기
+### 5. PR 열기
 
-- 터미널에 뜨는 링크를 열거나
-- GitHub 웹에서 `Compare & pull request` 버튼 클릭
-- PR 템플릿 채우기 (이슈 있으면 `closes #N`)
+push 후 터미널에 뜨는 링크 클릭, 또는 GitHub 웹에서
+`Compare & pull request` → 템플릿 채우고 `Create pull request`
 
-### 6. 리뷰 & merge
+### 6. review & merge
 
-- 트랙리드가 코멘트 남기면 반영
-- Approve 받으면 `Squash and merge`
-- 브랜치는 merge 후 삭제 (버튼으로)
+- 트랙리드가 코멘트 → 수정 필요하면 로컬에서 고치고 다시 `add → commit → push` (PR에 자동 반영됨)
+- Approve 후 **Squash and merge** → 브랜치 삭제 버튼 클릭
 
 ### 7. 로컬 정리
 
@@ -68,71 +77,26 @@ git pull
 git branch -d intro/본인이름
 ```
 
----
-
-## 🇬🇧 English
-
-### 0. Prerequisites
-
-- [ ] GitHub account
-- [ ] Accepted invitation to `OPT-official` org
-- [ ] Git installed locally (`git --version`)
-- [ ] VS Code (or your editor of choice) ready
-- [ ] (Optional) `gh` CLI installed — makes life easier
-
-### 1. Clone this repo
-
-```bash
-git clone https://github.com/OPT-official/SS-onboarding.git
-cd SS-onboarding
-```
-
-### 2. Create your branch
-
-```bash
-git checkout -b intro/yourname
-```
-
-### 3. Write your intro file
-
-Copy `members_intro/TEMPLATE.md` to `members_intro/yourname.md` and fill it in.
-
-```bash
-cp members_intro/TEMPLATE.md members_intro/yourname.md
-```
-
-### 4. Commit & push
-
-```bash
-git add members_intro/yourname.md
-git commit -m "intro: yourname"
-git push -u origin intro/yourname
-```
-
-### 5. Open a Pull Request
-
-- Click the link that appears in the terminal, or
-- Go to GitHub → `Compare & pull request`
-- Fill in the PR template
-
-### 6. Review & merge
-
-- Address review comments from the track lead
-- Once approved, `Squash and merge`
-- Delete the branch after merging
-
-### 7. Clean up locally
-
-```bash
-git checkout main
-git pull
-git branch -d intro/yourname
-```
+**🎉 끝! 방금 한 이 사이클이 앞으로 매주 반복할 흐름입니다.**
 
 ---
 
-## 🆘 막히면 / If stuck
+## 🆘 자주 막히는 곳
 
-- Discord `#dev-track` 채널에 물어보기
-- 이슈로 `bug-or-question` 템플릿 사용
-- 옆사람한테 물어보기 (같이 있잖아)
+| 증상 | 해결 |
+|------|------|
+| `Permission denied (403)` | org 초대 수락했는지 확인. 로컬 git 계정이 본인 계정인지 확인 (`git config user.name`) |
+| push했는데 PR 버튼 안 보임 | 레포 페이지 새로고침, 또는 `Pull requests` 탭 → `New pull request` |
+| 다른 사람 파일을 건드림 | `git checkout main -- 파일경로` 로 되돌리기 |
+| 커밋 메시지 오타 | (push 전이면) `git commit --amend -m "새 메시지"` |
+
+그래도 안 되면: Discord `#dev-track` 또는 옆사람 찬스.
+
+---
+
+## 🇬🇧 English (TL;DR)
+
+Clone → `git checkout -b intro/yourname` → copy `members_intro/TEMPLATE.md`
+to `members_intro/yourname.md` and fill it in → add/commit/push → open PR →
+address review → squash-merge → delete branch → `git checkout main && git pull`.
+This exact cycle repeats every week.
