@@ -1,0 +1,47 @@
+# 라벨 정의 / Label definitions
+# 
+# 적용 방법 / How to apply:
+#   1. gh CLI 설치 후 / After installing gh CLI:
+#      gh label create --file .github/labels.yml
+#   2. 또는 아래 명령어 스크립트를 참고: docs/setup-labels.sh
+#   3. 또는 GitHub 웹 UI에서 수동 생성 (Issues → Labels)
+
+- name: weekly-task
+  color: "0E8A16"
+  description: "매주 트랙리드가 발행하는 과제 / Weekly task from track lead"
+
+- name: feedback-request
+  color: "FBCA04"
+  description: "리뷰나 의견이 필요함 / Needs review or opinions"
+
+- name: skill-share
+  color: "5319E7"
+  description: "팀에 유용한 팁/발견 공유 / Sharing useful tips or findings"
+
+- name: bug
+  color: "D73A4A"
+  description: "예상대로 동작하지 않음 / Something isn't working"
+
+- name: question
+  color: "D876E3"
+  description: "질문 / Question"
+
+- name: docs
+  color: "0075CA"
+  description: "문서 관련 / Documentation"
+
+- name: harness
+  color: "1D76DB"
+  description: "Claude Code 하네스 관련 / Related to Claude Code harness"
+
+- name: good-first-task
+  color: "7057FF"
+  description: "처음 시작하기 좋은 작업 / Good task to start with"
+
+- name: blocked
+  color: "B60205"
+  description: "다른 것에 막혀있음 / Blocked by something else"
+
+- name: in-progress
+  color: "C2E0C6"
+  description: "작업 중 / Currently working on it"
