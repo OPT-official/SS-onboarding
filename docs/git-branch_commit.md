@@ -38,20 +38,27 @@ fix: README 깨진 링크 수정
 - 이슈 연결: PR 본문에 `closes #12`
 - merge 방식: **Squash and merge**
 
-## 매일 쓰는 명령어 
+## 브랜치 생성~commit~push 명령어 
 
 ```bash
+1] 초반 세팅
 git checkout main[여기에 브랜치 이름]  #해당 브랜치로 *이동*
 git pull                             # 시작 전: 최신화 =>이게 제일 중요함!@!@! 이거 안땡기고 푸시하면 엉킨다
 
+2] 브랜치 생성과 이동
 (브랜치명은 예시임. 본인이 알아서 작성)
-git branch feat/star_on_boarding
-git checkout -b feat/my-work         # 브랜치 생성+이동
+git branch intro/star               #'intro/star'라는 브랜치를 생성.
+git checkout intro/star             # 생성된 브랜치로 이동
 
-git add .                            # 변경사항 담기
-git commit -m "feat: 뭐뭐"           # 저장
-git push -u origin feat/my-work      # 올리기 (첫 push만 -u)
-git branch -d feat/my-work           # merge 후 정리
+3] 깃에 업로드(브랜치 내에서 폴더/파일 변화가 있을 때)
+git add .                            #1 "현재 폴더와 그 하위 폴더에서 변경된 모든 파일을 바구니에 담겠다 #2 CLI에서 . (점 하나)는 '현재 내가 위치한 폴더 전체'를 지칭 #3 add를 통해 수정된 코드가 '작업공간' -> '스테이징' 영역으로 이동
+git commit -m "feat: 뭐뭐~"           #1 메시지와 함께 저장 #2 '-m' 은 메시지를 입력하겠다는 뜻. 협업에서는 커밋 컨벤션에따라 꼭 메시지 입력해줘야함  #3 '스테이징' 영역 -> 메시지와 함께 로컬 레포(클론된 그거 맞음)에 저장됨
+git push        # 깃헙에 올리기 #'로컬 레포' -> '깃헙 레포' 이
+
+4] 브랜치 삭제(브랜치 작업이 merge되면 삭제해주는게 일반적인 개발 rule)
+(보통 PR이 합쳐지고(merge) 나서 다 쓴 브랜치를 청소할 때 사용. PR 머지와 이슈관리는 추후 설명)
+
+git branch -d intro/star           # merge 후 정리
 ```
 
 ## 충돌(conflict) 났을 때
