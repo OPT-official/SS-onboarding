@@ -8,10 +8,13 @@
 
 ```
 intro/이름        자기소개 (온보딩)
-feat/뭐뭐         새 기능·컨텐츠
+
+feat/뭐뭐         새로운 기능
 fix/뭐뭐          수정
 docs/뭐뭐         문서만
-experiment/뭐뭐   실험
+debug/뭐뭐        디버깅
+
+experiment/뭐뭐   실험(막써도 됨)
 ```
 
 ## 커밋 메시지
@@ -19,25 +22,29 @@ experiment/뭐뭐   실험
 한 줄로, 뭘 했는지 보이게. 형식보다 **명확함**이 우선.
 
 ```
-자기소개: 정지나
+예시)
+intro: 정지나 자기소개 최초 생성
 feat: pre-commit hook 예시 추가
-fix: README 깨진 링크
+fix: README 깨진 링크 수정
 ```
 
 ❌ `수정`, `업데이트`, `asdf` — 나중에 아무도 못 알아봄
 
 ## PR 규칙 (전 레포 공통)
 
-- `main` 직접 push 금지 (protected) → 무조건 PR
-- 리뷰 1명 승인 필요
+- `main` 브랜치 직접 push 금지 (protected) → 무조건 PR
+- 최소 리뷰 1명 승인 필요
+- (그 외 브랜치는 리뷰 없이 승인 가능)
 - 이슈 연결: PR 본문에 `closes #12`
 - merge 방식: **Squash and merge**
 
 ## 매일 쓰는 명령어 6개
 
 ```bash
-git checkout main && git pull        # 시작 전: 최신화
+git checkout main &&         # 시작 전: 최신화 =>이게 제일 중요함!@!@!
+git pull
 git checkout -b feat/my-work         # 브랜치 생성+이동
+
 git add .                            # 변경사항 담기
 git commit -m "feat: 뭐뭐"           # 저장
 git push -u origin feat/my-work      # 올리기 (첫 push만 -u)
