@@ -55,7 +55,7 @@ gh label create in-progress      --color "C2E0C6" --description "작업 중"
 
 - 제목: `[Week 0] 자기소개 PR 올리기 — 토요일 실습`
 - 라벨: `weekly-task`, `good-first-task` / Milestone: Week 0-1
-- Assignees: 3명 / 본문: `docs/saturday-mission.md` 링크
+- Assignees: 3명 / 본문: `docs/01_saturday-mission.md` 링크
 
 ## 6. CODEOWNERS 아이디 채우기 (SS-Harness-private)
 
@@ -63,4 +63,4 @@ gh label create in-progress      --color "C2E0C6" --description "작업 중"
 
 ---
 
-끝났으면 → [`ops-playbook.md`](ops-playbook.md) 로 이동. 주간 운영은 거기서.
+끝났으면 → [`03_ops-playbook.md`](03_ops-playbook.md) 로 이동. 주간 운영은 거기서.

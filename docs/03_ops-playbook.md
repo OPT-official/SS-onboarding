@@ -46,9 +46,9 @@ Week 5~           공동 하네스 통합 (해커톤식)               @ SS-Harn
 
 **목표:** 전원이 PR 1개 merge 성공. 그게 전부.
 
-- 준비물: `docs/saturday-mission.md` 절차 본인이 미리 한 번 돌려보기 (리허설)
+- 준비물: `docs/01_saturday-mission.md` 절차 본인이 미리 한 번 돌려보기 (리허설)
 - 발행할 Issue: `[Week 0] 자기소개 PR 올리기` — assignee 3명, `good-first-task`
-- 당일 아젠다: `saturday-mission.md` 상단 표 참고
+- 당일 아젠다: `01_saturday-mission.md` 상단 표 참고
 - **주의:** 403 에러 (org 초대 미수락) 가장 흔함. 시작 전에 전원 초대 수락 확인
 - 끝나기 전: 다음 주 과제(강의 시청) Issue 같이 읽기
 
@@ -104,4 +104,4 @@ Week 5~           공동 하네스 통합 (해커톤식)               @ SS-Harn
 ## 세팅 관련 (초기 1회)
 
 레포 생성 직후 웹 UI 세팅(라벨, milestone, branch protection)은
-[`setup-checklist.md`](setup-checklist.md) 참고. 3개 레포 모두 동일하게 적용.
+[`00_setup-checklist.md`](00_setup-checklist.md) 참고. 3개 레포 모두 동일하게 적용.

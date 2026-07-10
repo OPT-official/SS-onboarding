@@ -8,7 +8,7 @@
 ## 🚀 처음 왔다면 (3분 요약)
 
 1. **이 레포는 연습장입니다.** 망가뜨려도 됩니다. 실수 환영.
-2. **첫 미션:** 자기소개 파일을 PR로 올리기 → [`docs/saturday-mission.md`](docs/saturday-mission.md)
+2. **첫 미션:** 자기소개 파일을 PR로 올리기 → [`docs/01_saturday-mission.md`](docs/01_saturday-mission.md)
 3. **모르면:** Discord에 묻기, 또는 Issue 발행 (템플릿 있음)
 
 ```
@@ -19,9 +19,9 @@
 
 | 위치 | 내용 |
 |------|------|
-| `docs/saturday-mission.md` | 토요일 실습 절차 (따라하기만 하면 됨) |
-| `docs/git-workflow.md` | 브랜치/커밋/PR 규칙 치트시트 |
-| `docs/ops-playbook.md` | 🔑 트랙리드용 운영 플레이북 |
+| `docs/01_saturday-mission.md` | 토요일 실습 절차 (따라하기만 하면 됨) |
+| `docs/02_git-branch-commit.md` | 브랜치/커밋/PR 규칙 치트시트 |
+| `docs/03_ops-playbook.md` | 🔑 트랙리드용 운영 플레이북 |
 | `members_intro/` | 자기소개 파일 올리는 곳 (첫 실습) |
 | `.github/` | 이슈/PR 템플릿 — 자동으로 적용됨 |
 
@@ -64,7 +64,7 @@
 
 Practice sandbox for the OPT dev track. Learn the full GitHub cycle
 (clone → branch → commit → push → PR → review → merge) by submitting
-your intro file via PR. See [`docs/saturday-mission.md`](docs/saturday-mission.md).
+your intro file via PR. See [`docs/01_saturday-mission.md`](docs/01_saturday-mission.md).
 Breaking things here is fine — that's what this repo is for.
 Weekly cycle: task issued as Issue → work → PR → review → merge.
 `main` is protected; merges happen only via PR.
