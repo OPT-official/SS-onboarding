@@ -74,7 +74,10 @@ push 후 터미널에 뜨는 링크 클릭, 또는 GitHub 웹에서
 ```bash
 git checkout main
 git pull
-git branch -d intro/본인이름
+git branch -d intro/본인이름    
+
+### 8. git 브랜치반영
+git push origin --delete intro/star
 ```
 
 **🎉 끝! 방금 한 이 사이클이 앞으로 매주 반복할 흐름입니다.**
