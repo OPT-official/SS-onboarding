@@ -8,11 +8,11 @@ DL/ML에 관심이 많은 아기 개발자 입니다~!
 
 ## 🎯 이번 여름 목표 / Summer goal
 
-Good Networking 
+Good Networking / Basic Upgrading
 
 ## 🛠️ 지금 다루는 도구 / Tools I currently use
 
-- 언어 / Languages: Python, C++, JS
+- 언어 / Languages: Python, C++, JS, ENG(Vibe_Coding_Only)
 - 에디터 / Editor: VSCode, Pycharm
 - 자주 쓰는 것 / Frequently use: Claude Code
 
