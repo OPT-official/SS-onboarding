@@ -4,31 +4,39 @@
 
 ---
 
-## 브랜치 이름
+## 브랜치 이름 — `타입/이슈번호-설명`
 
 ```
-intro/이름        자기소개 (온보딩)
+feat/12-login-button   새 기능      (이슈 #12)
+fix/7-readme-typo      수정         (이슈 #7)
+docs/9-onboarding      문서만       (이슈 #9)
 
-feat/뭐뭐         새로운 기능
-fix/뭐뭐          수정
-docs/뭐뭐         문서만
-debug/뭐뭐        디버깅
-
-experiment/뭐뭐   실험(막써도 됨)
+experiment/뭐뭐         실험(막써도 됨, 이슈 없어도 OK)
+intro/이름              자기소개 (1주차 온보딩 예외 — 이슈번호 없음)
 ```
 
-## 커밋 메시지(커밋 컨벤션은 다들 숙지되면 수립)
+- 영문 소문자, 띄어쓰기는 `-`
+- 타입 = 아래 커밋 타입과 동일 (`feat`·`fix`·`docs`·`refactor`·`chore`)
+- 이슈번호를 넣으면 브랜치만 봐도 "왜 만든 브랜치"인지 추적됨
 
-한 줄로, 뭘 했는지 보이게. 형식보다 **명확함**이 우선.
+## 커밋 메시지 — Conventional Commits
+
+`타입: 설명` 형식. **타입 5개만** 기억.
 
 ```
-예시)
-intro: 정지나 자기소개 최초 생성
+feat      새 기능 / 새 내용 추가
+fix       버그 / 오류 수정
+docs      문서만 변경
+refactor  동작은 같고 구조만 개선
+chore     잡일 (설정, 폴더 정리)
+
+예)
 feat: pre-commit hook 예시 추가
 fix: README 깨진 링크 수정
 ```
 
 ❌ `수정`, `업데이트`, `asdf` — 나중에 아무도 못 알아봄
+> 💡 애매하면 일단 `chore`. 배경 설명 → [`sessions/week02/mission.md`](sessions/week02/mission.md)
 
 ## PR 규칙 (전 레포 공통)
 

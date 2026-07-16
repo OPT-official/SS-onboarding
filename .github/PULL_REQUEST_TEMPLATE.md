@@ -27,6 +27,6 @@ closes #
 
 ## ✅ 체크리스트 / Checklist
 
-- [ ] 브랜치 이름이 규칙에 맞음 (`intro/`, `feat/`, `docs/`, `fix/`)
-- [ ] 커밋 메시지가 명확함 / Commit messages are clear
-- [ ] 관련 이슈를 연결함 / Linked related issue
+- [ ] 브랜치 이름이 규칙에 맞음 (`타입/이슈번호-설명`, 예 `feat/12-login-button`)
+- [ ] 커밋 메시지가 Conventional Commits 형식 (`feat`/`fix`/`docs`/`refactor`/`chore`)
+- [ ] 관련 이슈를 연결함 / Linked related issue (`closes #N`)
