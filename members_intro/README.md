@@ -8,4 +8,4 @@
 - 템플릿: [`TEMPLATE.md`](TEMPLATE.md) 복사해서 시작
 - 브랜치: `intro/이름` / PR 제목: `자기소개: 이름`
 
-전체 절차 → [`../docs/01_saturday-mission.md`](../docs/01_saturday-mission.md)
+전체 절차 → [`../docs/sessions/week01/mission.md`](../docs/sessions/week01/mission.md)
