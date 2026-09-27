@@ -1,6 +1,6 @@
 # ✅ 트랙리드 초기 세팅 체크리스트
 
-**정별 전용. 토요일 전 완료.** 파일 push는 됐다는 전제로, GitHub 웹 UI에서만 되는 것들.
+**트랙장 전용. 2차모임 전 완료.** 파일 push는 됐다는 전제로, GitHub 웹 UI에서만 되는 것들.
 **⚠️ 아래 2~4번은 3개 레포(onboarding / Harness-private / Harness-communal) 모두 적용.**
 
 ---
